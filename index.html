@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mega Guia da IA — Missão Jovem</title>
+
+    <style>
+      /* ---------- ESTILO GERAL ---------- */
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", sans-serif;
+        background: linear-gradient(135deg, #0a0017, #180033, #30006b);
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      /* Fundo animado */
+      .particles {
+        position: fixed;
+        inset: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+        opacity: 0.18;
+        animation: drift 30s linear infinite;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      @keyframes drift {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-400px);
+        }
+      }
+
+      /* ---------- CABEÇALHO ---------- */
+      header {
+        padding: 70px 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      header h1 {
+        font-size: 50px;
+        color: #bb86ff;
+        text-shadow: 0 0 25px #d57bff;
+      }
+
+      header p {
+        font-size: 20px;
+        opacity: 0.9;
+      }
+
+      /* ---------- CONTEÚDO ---------- */
+      .wrapper {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px 25px 80px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Cartões estilo missão */
+      .mission {
+        background: rgba(255, 255, 255, 0.07);
+        padding: 30px;
+        margin-bottom: 35px;
+        border-radius: 15px;
+        border: 2px solid #9f5dff;
+        box-shadow: 0 0 20px #9f5dff55;
+      }
+
+      .mission h2 {
+        color: #e6b2ff;
+        text-shadow: 0 0 10px #e6b2ff;
+      }
+
+      .mission p {
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      /* ---------- ROBÔ MASCOTE ---------- */
+      .robot-box {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .robot-img {
+        width: 180px;
+        filter: drop-shadow(0 0 15px #c77dff);
+      }
+
+      #robot-text {
+        margin-top: 15px;
+        font-size: 20px;
+        color: #e6b2ff;
+        text-shadow: 0 0 12px #e6b2ff;
+        min-height: 60px;
+      }
+
+      /* ---------- LINHA DO TEMPO ---------- */
+      .timeline {
+        border-left: 3px solid #b47aff;
+        margin: 30px 0;
+        padding-left: 25px;
+      }
+
+      .timeline-item {
+        margin-bottom: 25px;
+      }
+
+      .timeline-item span {
+        font-size: 14px;
+        opacity: 0.7;
+      }
+
+      .timeline-item p {
+        margin: 5px 0 0;
+      }
+
+      /* ---------- MINI QUIZ ---------- */
+      .quiz {
+        margin-top: 40px;
+        background: rgba(255, 255, 255, 0.06);
+        padding: 20px 25px;
+        border-radius: 10px;
+        border: 2px solid #bb86ff;
+      }
+
+      .quiz button {
+        background: #bb86ff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      .quiz button:hover {
+        background: #d29dff;
+      }
+
+      /* ---------- QR CODE FINAL ---------- */
+      .qr-box {
+        margin-top: 60px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 40px;
+        text-align: center;
+        border-radius: 15px;
+        border: 2px solid #d57bff;
+        box-shadow: 0 0 25px #d57bff88;
+      }
+
+      .qr-box img {
+        width: 250px;
+        border-radius: 10px;
+        border: 3px solid #d57bff;
+        margin-top: 10px;
+      }
+
+      /* ---------- ÍCONES FLUTUANTES ---------- */
+      .icon {
+        position: absolute;
+        width: 80px;
+        opacity: 0.12;
+        animation: float 8s infinite ease-in-out alternate;
+        filter: drop-shadow(0 0 5px #d57bff);
+      }
+      @keyframes float {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-40px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="particles"></div>
+
+    <!-- ÍCONES NO FUNDO -->
+    <img
+      class="icon"
+      style="top: 18%; left: 5%"
+      src="https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    />
+    <img
+      class="icon"
+      style="top: 70%; left: 12%"
+      src="https://cdn-icons-png.flaticon.com/512/4712/4712069.png"
+    />
+    <img
+      class="icon"
+      style="top: 30%; right: 8%"
+      src="https://cdn-icons-png.flaticon.com/512/4712/4712075.png"
+    />
+    <img
+      class="icon"
+      style="top: 80%; right: 15%"
+      src="https://cdn-icons-png.flaticon.com/512/4712/4712096.png"
+    />
+
+    <header>
+      <h1>Missão Jovem: Inteligência Artificial</h1>
+      <p>
+        Descubra como dominar a IA com criatividade, segurança e consciência,
+        como um verdadeiro herói digital! ⚡🤖
+      </p>
+    </header>
+
+    <div class="wrapper">
+      <!-- ROBÔ MASCOTE -->
+      <div class="robot-box">
+        <img
+          class="robot-img"
+          src="https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+        />
+        <div id="robot-text"></div>
+      </div>
+
+      <script>
+        // Efeito de digitação no mascote
+        const msgs = [
+          "Olá, humano! 👋 Sou o R-42, seu guia na Missão IA!",
+          "Hoje você vai aprender a usar a IA com inteligência e coragem.",
+          "Prepare-se para desbloquear novos poderes digitais! 🚀",
+        ];
+
+        let i = 0;
+        let textIndex = 0;
+
+        function typeWriter() {
+          let msg = msgs[textIndex];
+          if (i < msg.length) {
+            document.getElementById("robot-text").innerHTML += msg.charAt(i);
+            i++;
+            setTimeout(typeWriter, 30);
+          } else {
+            setTimeout(() => {
+              textIndex = (textIndex + 1) % msgs.length;
+              i = 0;
+              document.getElementById("robot-text").innerHTML = "";
+              typeWriter();
+            }, 2000);
+          }
+        }
+
+        typeWriter();
+      </script>
+
+      <!-- MISSÃO 1 -->
+      <div class="mission">
+        <h2>🧠 Missão 1: Entenda o que a IA realmente é</h2>
+        <p>
+          IA não é mágica — é matemática, lógica e dados. Ela aprende com
+          padrões e tenta prever o que você quer. Mas não se engane:
+          <b
+            >a criatividade e o pensamento crítico ainda são seus superpoderes
+            principais.</b
+          >
+        </p>
+      </div>
+
+      <!-- MISSÃO 2 -->
+      <div class="mission">
+        <h2>🚀 Missão 2: Use IA para turbinar suas habilidades</h2>
+        <p>O mundo real tem exemplos incríveis de adolescentes usando IA:</p>
+        <ul>
+          <li>🎮 Criar jogos usando imagens e diálogos gerados pela IA</li>
+          <li>🎤 Criar músicas usando IA como co-produtora</li>
+          <li>📱 Criar apps que ajudam outras pessoas</li>
+          <li>📚 Estudar mais rápido organizando textos e resumos</li>
+        </ul>
+      </div>
+
+      <!-- MISSÃO 3 -->
+      <div class="mission">
+        <h2>⚠️ Missão 3: Atenção! IA pode errar</h2>
+        <p>
+          Ela pode inventar fatos, criar fake news e até gerar imagens falsas.
+          Por isso, antes de confiar:
+        </p>
+        <ul>
+          <li>Cheque se a informação existe em outras fontes</li>
+          <li>Desconfie de respostas muito perfeitas</li>
+          <li>Pergunte: "Isso faz sentido?"</li>
+        </ul>
+      </div>
+
+      <!-- MISSÃO 4 -->
+      <div class="mission">
+        <h2>🔒 Missão 4: Cuide da sua privacidade</h2>
+        <p>
+          Nunca forneça: nome completo, endereço, documentos, localização. Um
+          herói sabe proteger sua identidade digital! 🛡️
+        </p>
+      </div>
+
+      <!-- LINHA DO TEMPO -->
+      <div class="mission">
+        <h2>📅 Linha do Tempo da IA (Versão Turbo)</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>1956</span>
+            <p>O termo “Inteligência Artificial” nasce.</p>
+          </div>
+          <div class="timeline-item">
+            <span>1997</span>
+            <p>IA derrota o campeão mundial de xadrez.</p>
+          </div>
+          <div class="timeline-item">
+            <span>2022+</span>
+            <p>
+              Ferramentas de IA começam a criar textos, vozes, músicas e
+              imagens.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span>Futuro</span>
+            <p>
+              Vocês — a nova geração — vão definir o que a IA será daqui pra
+              frente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MINI QUIZ -->
+      <div class="quiz">
+        <h2>🎯 Mini Quiz Relâmpago!</h2>
+        <p>
+          <b>Pergunta:</b> Se a IA disser algo que parece estranho, o que você
+          deve fazer?
+        </p>
+
+        <button
+          onclick="document.getElementById('quiz-result').innerHTML='✔ Correto! Sempre verifique e confirme a informação!'"
+        >
+          Verificar a informação
+        </button>
+
+        <button
+          onclick="document.getElementById('quiz-result').innerHTML='❌ Ops! Confiar cegamente na IA nunca é a resposta.'"
+        >
+          Acreditar sem pensar
+        </button>
+
+        <p id="quiz-result" style="margin-top: 15px; font-size: 18px"></p>
+      </div>
+
+      <!-- QR CODE -->
+      <div class="qr-box">
+        <h2>📲 Pronto para jogar?</h2>
+        <p>Escaneie o QR Code e entre no Kahoot!</p>
+
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://kahoot.it"
+        />
+      </div>
+    </div>
+  </body>
+</html>
