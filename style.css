@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  background: linear-gradient(135deg, #0a0017, #180033, #30006b);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Fundo animado */
+.particles {
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.18;
+  animation: drift 30s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-400px);
+  }
+}
+
+/* ---------- CABEÇALHO ---------- */
+header {
+  padding: 70px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 50px;
+  color: #bb86ff;
+  text-shadow: 0 0 25px #d57bff;
+}
+
+header p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* ---------- CONTEÚDO ---------- */
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 25px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cartões estilo missão */
+.mission {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 30px;
+  margin-bottom: 35px;
+  border-radius: 15px;
+  border: 2px solid #9f5dff;
+  box-shadow: 0 0 20px #9f5dff55;
+}
+
+.mission h2 {
+  color: #e6b2ff;
+  text-shadow: 0 0 10px #e6b2ff;
+}
+
+.mission p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* ---------- ROBÔ MASCOTE ---------- */
+.robot-box {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.robot-img {
+  width: 180px;
+  filter: drop-shadow(0 0 15px #c77dff);
+}
+
+#robot-text {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #e6b2ff;
+  text-shadow: 0 0 12px #e6b2ff;
+  min-height: 60px;
+}
+
+/* ---------- LINHA DO TEMPO ---------- */
+.timeline {
+  border-left: 3px solid #b47aff;
+  margin: 30px 0;
+  padding-left: 25px;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+}
+
+.timeline-item span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.timeline-item p {
+  margin: 5px 0 0;
+}
+
+/* ---------- MINI QUIZ ---------- */
+.quiz {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 20px 25px;
+  border-radius: 10px;
+  border: 2px solid #bb86ff;
+}
+
+.quiz button {
+  background: #bb86ff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.quiz button:hover {
+  background: #d29dff;
+}
+
+/* ---------- QR CODE FINAL ---------- */
+.qr-box {
+  margin-top: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid #d57bff;
+  box-shadow: 0 0 25px #d57bff88;
+}
+
+.qr-box img {
+  width: 250px;
+  border-radius: 10px;
+  border: 3px solid #d57bff;
+  margin-top: 10px;
+}
+
+/* ---------- ÍCONES FLUTUANTES ---------- */
+.icon {
+  position: absolute;
+  width: 80px;
+  opacity: 0.12;
+  animation: float 8s infinite ease-in-out alternate;
+  filter: drop-shadow(0 0 5px #d57bff);
+}
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-40px);
+  }
+}
