@@ -49,36 +49,6 @@
         <div id="robot-text"></div>
       </div>
 
-      <script>
-        // Efeito de digitação no mascote
-        const msgs = [
-          "Olá, humano! 👋 Sou o R-42, seu guia na Missão IA!",
-          "Hoje você vai aprender a usar a IA com inteligência e coragem.",
-          "Prepare-se para desbloquear novos poderes digitais! 🚀",
-        ];
-
-        let i = 0;
-        let textIndex = 0;
-
-        function typeWriter() {
-          let msg = msgs[textIndex];
-          if (i < msg.length) {
-            document.getElementById("robot-text").innerHTML += msg.charAt(i);
-            i++;
-            setTimeout(typeWriter, 30);
-          } else {
-            setTimeout(() => {
-              textIndex = (textIndex + 1) % msgs.length;
-              i = 0;
-              document.getElementById("robot-text").innerHTML = "";
-              typeWriter();
-            }, 2000);
-          }
-        }
-
-        typeWriter();
-      </script>
-
       <!-- MISSÃO 1 -->
       <div class="mission">
         <h2>🧠 Missão 1: Entenda o que a IA realmente é</h2>
@@ -127,67 +97,37 @@
         </p>
       </div>
 
-      <!-- LINHA DO TEMPO -->
-      <div class="mission">
-        <h2>📅 Linha do Tempo da IA (Versão Turbo)</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span>1956</span>
-            <p>O termo “Inteligência Artificial” nasce.</p>
+      <!-- JOGO DAS MISSÕES -->
+      <div id="game-container" class="mission">
+        <h2>🚀 Missão Final: Teste seu conhecimento!</h2>
+        <p>Complete as 10 missões para se tornar um mestre da IA.</p>
+
+        <div id="progress-bar-container" class="hidden">
+          <div id="progress-bar"></div>
+        </div>
+
+        <div id="question-container" class="hidden">
+          <div id="question" style="margin-bottom: 20px; font-size: 1.2em">
+            Question text
           </div>
-          <div class="timeline-item">
-            <span>1997</span>
-            <p>IA derrota o campeão mundial de xadrez.</p>
-          </div>
-          <div class="timeline-item">
-            <span>2022+</span>
-            <p>
-              Ferramentas de IA começam a criar textos, vozes, músicas e
-              imagens.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <span>Futuro</span>
-            <p>
-              Vocês — a nova geração — vão definir o que a IA será daqui pra
-              frente.
-            </p>
+          <div id="answer-buttons" class="btn-grid">
+            <!-- Botões de resposta serão gerados aqui -->
           </div>
         </div>
-      </div>
 
-      <!-- MINI QUIZ -->
-      <div class="quiz">
-        <h2>🎯 Mini Quiz Relâmpago!</h2>
-        <p>
-          <b>Pergunta:</b> Se a IA disser algo que parece estranho, o que você
-          deve fazer?
-        </p>
+        <div id="result-container" class="hidden" style="text-align: center">
+          <h3></h3>
+          <p style="margin-bottom: 20px"></p>
+          <button id="restart-btn" class="btn">Tentar Novamente</button>
+        </div>
 
-        <button
-          onclick="document.getElementById('quiz-result').innerHTML='✔ Correto! Sempre verifique e confirme a informação!'"
-        >
-          Verificar a informação
-        </button>
-
-        <button
-          onclick="document.getElementById('quiz-result').innerHTML='❌ Ops! Confiar cegamente na IA nunca é a resposta.'"
-        >
-          Acreditar sem pensar
-        </button>
-
-        <p id="quiz-result" style="margin-top: 15px; font-size: 18px"></p>
-      </div>
-
-      <!-- QR CODE -->
-      <div class="qr-box">
-        <h2>📲 Pronto para jogar?</h2>
-        <p>Escaneie o QR Code e entre no Kahoot!</p>
-
-        <img
-          src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://kahoot.it"
-        />
+        <div id="controls" style="text-align: center; margin-top: 20px">
+          <button id="start-btn" class="btn">Começar Missão</button>
+          <button id="next-btn" class="btn hidden">Próxima Missão</button>
+        </div>
       </div>
     </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>

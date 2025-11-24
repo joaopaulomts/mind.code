@@ -155,6 +155,102 @@ header p {
   margin-top: 10px;
 }
 
+/* ---------- JOGO DE MISSÕES ---------- */
+#game-container {
+  text-align: center;
+}
+
+#progress-bar-container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 1px solid #bb86ff88;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: #bb86ff;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  background: #bb86ff;
+  border: 2px solid #d57bff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  outline: none;
+}
+
+.btn:hover {
+  background: #d29dff;
+  transform: scale(1.03);
+}
+
+.btn.correct {
+  background-color: #4caf50;
+  border-color: #81c784;
+}
+
+.btn.wrong {
+  background-color: #f44336;
+  border-color: #e57373;
+}
+
+.btn.correct, .btn.wrong {
+    color: white;
+    pointer-events: none; /* Desativa cliques após a resposta */
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.explanation-text {
+    grid-column: 1 / -1; /* Ocupa as duas colunas */
+    margin-top: 15px;
+    font-size: 16px;
+    color: #e6b2ff;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#result-container h3{
+    color: #bb86ff;
+    text-shadow: 0 0 15px #d57bff;
+}
+
 /* ---------- ÍCONES FLUTUANTES ---------- */
 .icon {
   position: absolute;
