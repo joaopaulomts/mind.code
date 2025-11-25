@@ -60,13 +60,13 @@ const questions = [
     explanation: "Sim, uma IA pode ser tendenciosa (ter um 'viés'). Ela aprende com dados da internet, que muitas vezes refletem preconceitos do mundo real. É nosso papel questionar isso!"
   },
   {
-    question: "Um vídeo mostra seu cantor favorito dizendo algo horrível. O que é mais seguro pensar?",
+    question: "Você encontra um aplicativo que usa IA para identificar plantas e animais por uma foto. Como essa tecnologia pode ajudar o meio ambiente?",
     answers: [
-      { text: "'Com certeza é verdade.'", correct: false },
-      { text: "'Vou compartilhar para alertar meus amigos.'", correct: false },
-      { text: "'Isso pode ser um deepfake, preciso verificar.'", correct: true },
+      { text: "Apenas para fazer posts bonitos nas redes sociais.", correct: false },
+      { text: "Ajudando cientistas a monitorar a biodiversidade e proteger espécies.", correct: true },
+      { text: "Substituindo biólogos para que não precisem mais ir a campo.", correct: false },
     ],
-    explanation: "Exato! Com a tecnologia deepfake, é possível criar vídeos falsos muito realistas. Sempre duvide e cheque em fontes confiáveis antes de acreditar ou compartilhar."
+    explanation: "Isso mesmo! Ferramentas de IA ajudam cientistas a coletar e analisar dados em grande escala, acelerando a descoberta de novas espécies e a proteção de ecossistemas. É a tecnologia a serviço da natureza!"
   },
   {
     question: "Você usa uma IA para te ajudar no dever de casa. Qual é a maneira mais inteligente de usar a resposta dela?",
