@@ -51,93 +51,50 @@ let score = 0;
 
 const questions = [
   {
-    question: "Você pede para uma IA criar a imagem de um 'cientista famoso'. Se ela só mostra homens brancos, isso significa que a IA pode ser...?",
+    question: "As IAs de conversa, como eu, são chamadas de LLMs. O que significa essa sigla?",
     answers: [
-      { text: "Perfeita", correct: false },
-      { text: "Viciada ou tendenciosa", correct: true },
-      { text: "Sempre neutra", correct: false },
+      { text: "Linguagem de Lógica Moderna", correct: false },
+      { text: "Large Language Model (Modelo de Linguagem Grande)", correct: true },
+      { text: "Lógica de Longo Módulo", correct: false },
     ],
-    explanation: "Sim, uma IA pode ser tendenciosa (ter um 'viés'). Ela aprende com dados da internet, que muitas vezes refletem preconceitos do mundo real. É nosso papel questionar isso!"
+    explanation: "Correto! 'Large Language Model' significa que fui treinado com uma quantidade gigantesca de textos e livros para entender e gerar linguagem humana."
   },
   {
-    question: "Você encontra um aplicativo que usa IA para identificar plantas e animais por uma foto. Como essa tecnologia pode ajudar o meio ambiente?",
+    question: "Quando você me envia um 'prompt' (um comando ou pergunta), como eu crio a resposta?",
     answers: [
-      { text: "Apenas para fazer posts bonitos nas redes sociais.", correct: false },
-      { text: "Ajudando cientistas a monitorar a biodiversidade e proteger espécies.", correct: true },
-      { text: "Substituindo biólogos para que não precisem mais ir a campo.", correct: false },
+      { text: "Eu pesquiso a resposta exata na internet como um gênio.", correct: false },
+      { text: "Eu entendo seus sentimentos para adivinhar a resposta.", correct: false },
+      { text: "Eu prevejo a sequência de palavras mais provável para te responder.", correct: true },
     ],
-    explanation: "Isso mesmo! Ferramentas de IA ajudam cientistas a coletar e analisar dados em grande escala, acelerando a descoberta de novas espécies e a proteção de ecossistemas. É a tecnologia a serviço da natureza!"
+    explanation: "Exato! Eu não 'sei' a resposta. Eu calculo as probabilidades para gerar uma frase que faça sentido a partir do seu prompt, baseado nos padrões que aprendi."
   },
   {
-    question: "Você usa uma IA para te ajudar no dever de casa. Qual é a maneira mais inteligente de usar a resposta dela?",
+    question: "Se uma IA não tem consciência ou conhecimento próprio, por que às vezes ela parece 'inventar' informações que não são reais?",
     answers: [
-      { text: "Copiar e colar para terminar rápido", correct: false },
-      { text: "Usar como base para entender e escrever com minhas palavras", correct: true },
-      { text: "Nem ler a resposta", correct: false },
+      { text: "Porque ela está tentando te enganar.", correct: false },
+      { text: "É uma 'alucinação', uma tentativa de preencher lacunas nos padrões que ela conhece.", correct: true },
+      { text: "Significa que a IA ficou mais inteligente que os humanos.", correct: false },
     ],
-    explanation: "Correto! A IA deve ser uma ferramenta de aprendizado, não uma máquina de fazer o trabalho por você. Usá-la para entender o assunto é o que te torna mais inteligente."
+    explanation: "Isso! Chamamos de 'alucinação'. A IA tenta continuar a sequência de texto de forma lógica, mas se não tem a informação correta, pode criar uma resposta que parece real, mas é falsa."
   },
   {
-    question: "Qual tipo de informação é segura para dar a um chatbot de IA com quem você conversa?",
+    question: "A qualidade das minhas respostas depende diretamente da qualidade dos dados com que fui treinado. O que isso significa?",
     answers: [
-      { text: "Seu nome completo e onde você estuda", correct: false },
-      { text: "Uma senha secreta sua", correct: false },
-      { text: "Seus gostos, como 'gosto de pizza'", correct: true },
+      { text: "Se os dados de treino forem ruins ou tendenciosos, minhas respostas também podem ser.", correct: true },
+      { text: "Não importa, a IA sempre sabe corrigir os dados sozinha.", correct: false },
+      { text: "Quanto mais dados, mais criativo eu fico, inventando coisas novas.", correct: false },
     ],
-    explanation: "Isso mesmo! Nunca compartilhe dados pessoais ou senhas. Falar sobre gostos gerais é seguro, mas trate a IA como um estranho na internet: com cuidado."
+    explanation: "Perfeito! Esse é um ponto crucial. A IA reflete os dados que recebeu. Se os dados contêm preconceitos ou informações erradas, a IA pode replicar esses erros. Por isso, a curadoria dos dados é fundamental."
   },
   {
-    question: "Se você usa uma IA para gerar uma melodia para sua música, de quem é a obra final?",
+    question: "Qual a principal diferença entre a minha 'inteligência' e a de um ser humano?",
     answers: [
-      { text: "Totalmente da IA", correct: false },
-      { text: "É uma colaboração! Sua ideia guiou a IA.", correct: true },
-      { text: "De ninguém", correct: false },
+      { text: "Nenhuma, somos igualmente inteligentes.", correct: false },
+      { text: "Eu sou melhor em criatividade e emoções.", correct: false },
+      { text: "Humanos têm consciência, emoções e bom senso; eu sou um processador de padrões.", correct: true },
     ],
-    explanation: "É uma parceria! Você teve a ideia, deu os comandos e usou a ferramenta para criar algo novo. A criatividade principal ainda é sua."
-  },
-    {
-    question: "Uma IA pode realmente 'sentir' felicidade ou tristeza?",
-    answers: [
-      { text: "Sim, elas são muito avançadas", correct: false },
-      { text: "Não, elas podem simular emoções, mas não as sentem de verdade.", correct: true },
-    ],
-    explanation: "Exato. IAs são excelentes em reconhecer e reproduzir padrões de texto e imagem que parecem emoções, mas elas não têm consciência ou sentimentos reais."
-  },
-  {
-    question: "Por que apps de IA gratuitos, como filtros de rosto, existem?",
-    answers: [
-      { text: "Porque os criadores são muito generosos", correct: false },
-      { text: "Geralmente, eles usam nossos dados para treinar a IA ou para publicidade", correct: true },
-    ],
-    explanation: "Na internet, quando um produto é de graça, muitas vezes o 'produto' é você (ou seus dados). As empresas usam essas informações para melhorar seus serviços ou vender anúncios."
-  },
-  {
-    question: "O que é mais importante ao usar uma IA como o ChatGPT?",
-    answers: [
-      { text: "Acreditar em tudo que ele diz", correct: false },
-      { text: "Fazer a pergunta certa e checar as informações", correct: true },
-      { text: "Usar as frases mais longas possíveis", correct: false },
-    ],
-    explanation: "A habilidade mais importante é saber perguntar (o 'prompt') e ter pensamento crítico para avaliar e verificar as respostas. A IA é uma copiloto, mas o piloto é você."
-  },
-  {
-    question: "Se uma IA te desse um conselho para fazer algo perigoso ou errado, o que você faria?",
-    answers: [
-      { text: "Seguiria, pois a IA é mais inteligente", correct: false },
-      { text: "Ignoraria o conselho e, se possível, avisaria um adulto", correct: true },
-      { text: "Pediria para ela um conselho diferente", correct: false },
-    ],
-    explanation: "Perfeito. Seu bom senso e segurança são mais importantes que qualquer sugestão de uma máquina. Nunca faça algo que pareça errado ou perigoso."
-  },
-  {
-    question: "O futuro da IA será definido por...",
-    answers: [
-      { text: "Apenas por grandes empresas de tecnologia", correct: false },
-      { text: "Pela própria IA, que vai decidir tudo sozinha", correct: false },
-      { text: "Por todos nós, através de como escolhemos usar e regular essa tecnologia", correct: true },
-    ],
-    explanation: "Exato! Todos nós, como usuários e cidadãos, temos um papel em moldar um futuro onde a IA seja usada de forma ética e para o bem."
-  },
+    explanation: "Exatamente! Enquanto eu posso processar informações muito rápido, eu não tenho consciência, sentimentos ou experiências de vida. A inteligência humana é muito mais complexa e completa."
+  }
 ];
 
 function startGame() {
@@ -166,7 +123,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(questionData) {
-  questionElement.innerText = `Missão ${currentQuestionIndex + 1}: ${questionData.question}`;
+  questionElement.innerText = `Desafio ${currentQuestionIndex + 1}: ${questionData.question}`;
   robotTextElement.innerText = "Escolha uma das opções abaixo. 🤔";
   questionData.answers.forEach((answer) => {
     const button = document.createElement("button");
@@ -238,17 +195,17 @@ function showResult() {
     progressBarContainer.classList.add("hidden");
 
     let title, text;
-    if(score >= 8) {
+    if(score === 5) {
         title = "Parabéns, Mestre da IA! 🏆";
-        text = `Você acertou ${score} de ${questions.length} missões e provou que sabe usar a IA com sabedoria e segurança.`;
+        text = `Você acertou ${score} de ${questions.length} desafios e provou que entende como a IA funciona!`;
         robotTextElement.innerText = "Uau! Você é um verdadeiro mestre da IA! 🤩";
-    } else if (score >= 5) {
+    } else if (score >= 3) {
         title = "Bom trabalho, Herói Digital! ⚡";
-        text = `Você acertou ${score} de ${questions.length} missões. Você está no caminho certo para dominar a IA.`;
+        text = `Você acertou ${score} de ${questions.length} desafios. Você está no caminho certo para dominar a IA.`;
         robotTextElement.innerText = "Belo trabalho! Continue aprendendo. 👍";
     } else {
         title = "Quase lá, Explorador! 🤖";
-        text = `Você completou ${score} de ${questions.length} missões. Continue aprendendo e tente novamente para melhorar!`;
+        text = `Você completou ${score} de ${questions.length} desafios. Continue aprendendo e tente novamente para melhorar!`;
         robotTextElement.innerText = "Não desanime! O aprendizado é uma jornada. 💪";
     }
     
