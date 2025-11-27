@@ -31,8 +31,6 @@ Para executar o projeto, não é necessária nenhuma instalação complexa. Bast
 2.  Navegue até a pasta onde os arquivos foram salvos.
 3.  Abra o arquivo `index.html` em qualquer navegador de internet moderno (Google Chrome, Firefox, Microsoft Edge, etc.).
 
-E pronto! A aventura já vai começar.
-
 ---
 
 ## ✏️ Como Personalizar as Perguntas
