@@ -32,25 +32,3 @@ Para executar o projeto, não é necessária nenhuma instalação complexa. Bast
 3.  Abra o arquivo `index.html` em qualquer navegador de internet moderno (Google Chrome, Firefox, Microsoft Edge, etc.).
 
 ---
-
-## ✏️ Como Personalizar as Perguntas
-
-As perguntas do quiz podem ser facilmente editadas.
-
-1.  Abra o arquivo `script.js` em um editor de texto.
-2.  Encontre a constante `const questions = [...]`.
-3.  Você pode editar o texto da `question`, as `answers` (respostas) e a `explanation` (explicação) de cada objeto.
-
-**Estrutura da Pergunta:**
-
-```javascript
-{
-  question: "Aqui vai a sua pergunta?",
-  answers: [
-    { text: "Resposta incorreta 1", correct: false },
-    { text: "Resposta correta", correct: true },
-    { text: "Resposta incorreta 2", correct: false },
-  ],
-  explanation: "Aqui vai a explicação que aparece após a resposta ser escolhida."
-}
-```
